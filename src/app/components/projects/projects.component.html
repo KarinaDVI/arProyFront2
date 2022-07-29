@@ -1,0 +1,25 @@
+
+
+<div class="row">
+
+    <div class="border">
+        <h1>Proyectos realizados   <button class="btn btn-info" routerLink="/projectNuevo"> Nuevo</button>
+        </h1>
+        
+            <ul class="item-list">
+                <li *ngFor="let project of projectList">
+                    <div class="col-sm-11 col-md-7 col-lg-7 parte1">
+                        <h3>{{project.name}}</h3>
+                        <h3>{{project.aboutProject}}</h3>
+                    </div>
+                    <div class="col-sm-11 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
+                        <img src={{project.urlimg}} class="img-fluid img-proyecto">
+                    </div>
+                    <div >
+                        <button class="btn btn-warning mb-3" routerLink="/projectEdit/{{project.id}}">Editar</button>
+                        <button class="btn btn-danger mb-3" (click)="borrarProjectDeLista(project)">Eliminar</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>

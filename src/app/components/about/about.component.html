@@ -1,0 +1,31 @@
+
+<div class="row">
+    
+    <h1 class="nuevo"><button class="btn btn-info mb-1" routerLink="/aboutNuevo"> Nuevo</button>
+    </h1>
+    <div class="row" *ngFor="let persona of personasList">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
+            <img id="fotoperfil" [src]="persona.urlimage" class="fotoperfil img-fluid rounded-circle" >
+        </div>
+        <div id="nombre" class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+
+            <p>{{persona.nombre}} {{persona.apellido}}</p>
+            <div>
+                <p>{{persona.edad}} años </p>
+                <p>{{persona.seniority}} </p>
+                <p>{{persona.company}}</p>
+                <p>{{persona.position}}</p>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <span>
+                <h1>Acerca de mi</h1>
+                <p>{{persona.abouts}}</p>
+                <td *ngIf="isAdmin"><button class="btn btn-warning mb-3" routerLink="/aboutEdit/{{persona.id}}">Editar</button></td>
+                <button class="btn btn-danger mb-3" (click)="borrarPersonaDeLista(persona)">Eliminar</button>
+            </span>
+        </div>
+    </div>
+
+</div>

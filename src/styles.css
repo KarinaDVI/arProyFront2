@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+div{
+    max-width:inherit;
+    opacity:50;
+    color:antiquewhite;
+    flex-shrink: 1;
+    font-size:medium;
+}
+.parte1, .parte2{
+    display: inline-block;
+    text-align: justify;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    /*background-color:rgb(73, 63, 55);*/
+    background-image: URL("../../../assets/3153478.jpg");
+    background-size:initial;
+    align-items: center;
+}
+
+.btn-edit > span{
+    /*border: 1px solid rgb(56, 71, 83);*/ 
+    border-radius: 0.25em; 
+    padding: 1em;
+    color:antiquewhite;
+}
+i{
+    color:antiquewhite;
+}
+h4 > .ispan{
+    padding-inline-start: 40px;
+    padding-inline-end: 10px;
+
+}
+.card{
+    background-color:initial;
+}
+.modal-content{
+    background-color: rgba(20, 18, 19, 0.521);
+}

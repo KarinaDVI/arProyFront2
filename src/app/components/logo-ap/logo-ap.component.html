@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+                <img id="apIco"src="../../../assets/argprogsf.png" alt="">
+        </div>
+        <div class="redes">
+                <a href="https://www.facebook.com/karina.bouza1"><img src="../../../assets/faceIcon1.png" id="linkedin"></a>
+                <a href="https://www.linkedin.com/in/karina-bouza-3266b32b"><img src="../../../assets/linkedin.png" id="linkedin"></a>
+                <a href="https://github.com/KarinaDVI?tab=repositories"><img src="../../../assets/github.png" id="github"></a>
+                <button type="button" class="btn btn-outline-light" *ngIf="!isLogged" routerLink="/login">Iniciar sesion</button>
+                <button type="button" class="btn btn-outline-light" *ngIf="isLogged" (click)="onLogOut()">Cerrar sesion</button>
+        </div>
+    </div>   
+</div>
+    
+    
+        
+    
+
+

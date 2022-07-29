@@ -1,0 +1,36 @@
+.row{
+
+    /*padding:30px;*/
+    border-radius: 100px;
+    border-style: ridge;
+    
+}
+.card{
+
+    padding:40px;
+    padding-left: -1rem;
+    margin-right: -12px;
+    
+}
+circle-progress{
+    align-self:center;
+
+}
+
+.padding{
+    padding-right: 50px;
+    padding-left: 25px;
+}
+.container{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.flotante{
+    position:sticky;
+}
+
+
+
+

@@ -1,0 +1,41 @@
+<p>edit-education works!</p>
+<div class="container-mt-3 contenedor col-xs-12 col-sm-12 col-md-12 col-lg-12 flex" *ngIf="listEducation">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="title">Titulo: </label>
+                    <input type="text" class="form-control" id="title" name="title"
+                    [(ngModel)]="listEducation.title" required>
+                </div>
+                <div class="form-group">
+                    <label for="starts">Inicio: </label>
+                    <input type="number" class="form-control" id="starts" name="starts"
+                    [(ngModel)]="listEducation.starts" required>
+                </div>
+                <div class="form-group">
+                    <label for="ends">Fin: </label>
+                    <input type="number" class="form-control" id="ends" name="ends"
+                    [(ngModel)]="listEducation.ends" required>
+                </div>
+                <div class="form-group">
+                    <label for="school">Institución</label>
+                    <input type="text" class="form-control" id="school" name="school"
+                    [(ngModel)]="listEducation.school" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Estado:  </label>
+                    <input type="text" class="form-control" id="status" name="status"
+                    [(ngModel)]="listEducation.status" required>
+                </div>
+                <div class="form-group">
+                    <label for="urlimg">UrlImage:  </label>
+                    <input type="text" class="form-control" id="urlimg" name="urlimg"
+                    [(ngModel)]="listEducation.urlimg" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-info" routerLink="/">Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

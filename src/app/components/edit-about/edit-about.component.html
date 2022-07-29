@@ -1,0 +1,50 @@
+<div class="container-mt-3 contenedor col-xs-12 col-sm-12 col-md-12 col-lg-12 flex">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" 
+                    [(ngModel)]="aboutMe.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" 
+                    [(ngModel)]="aboutMe.apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" id="edad" name="edad" 
+                    [(ngModel)]="aboutMe.edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="seniority">Seniority</label>
+                    <input type="text" class="form-control" id="seniority" name="seniority"
+                        [(ngModel)]="aboutMe.seniority" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="urlimage">Image</label>
+                    <input type="text" class="form-control" id="urlimage" name="urlimage"
+                        [(ngModel)]="aboutMe.urlimage" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">company</label>
+                    <input type="text" class="form-control" id="company" name="company" [(ngModel)]="aboutMe.company">
+                </div>
+                <div class="form-group">
+                    <label for="position">position</label>
+                    <input type="text" class="form-control" id="position" name="position"
+                        [(ngModel)]="aboutMe.position" required>
+                </div>
+                <div class="form-group">
+                    <label for="abouts">About me</label>
+                    <input type="text" class="form-control" id="abouts" name="abouts" 
+                    [(ngModel)]="aboutMe.abouts" required>
+                </div>
+                <button class="btn btn-danger btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-info" routerLink="/">Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
