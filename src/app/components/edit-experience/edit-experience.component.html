@@ -4,12 +4,12 @@
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="position">Titulo: </label>
+                    <label for="position">Posición: </label>
                     <input type="text" class="form-control" id="position" name="position"
                     [(ngModel)]="listExperience.position" required>
                 </div>
                 <div class="form-group">
-                    <label for="company">Titulo: </label>
+                    <label for="company">Compañia: </label>
                     <input type="text" class="form-control" id="company" name="company"
                     [(ngModel)]="listExperience.company" required>
                 </div>
@@ -30,7 +30,7 @@
                     [(ngModel)]="listExperience.urlimg" required>
                 </div>
                 <div class="form-group">
-                    <label for="mode">UrlImage:  </label>
+                    <label for="mode">modo:  </label>
                     <input type="text" class="form-control" id="mode" name="mode"
                     [(ngModel)]="listExperience.mode" required>
                 </div>

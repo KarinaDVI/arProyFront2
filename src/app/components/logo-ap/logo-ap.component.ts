@@ -9,12 +9,14 @@ import { TokenService } from 'src/app/services/token.service';
 export class LogoApComponent implements OnInit {
 
   isLogged = false;
+  showUser!:string;
 
   constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
     if (this.tokenService.getToken()) {
       this.isLogged = true;
+      this.showUser=this.tokenService.getUserName();
     } else {
       this.isLogged = false;
     }

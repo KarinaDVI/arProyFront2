@@ -1,7 +1,5 @@
 .row{
-
-    padding:20px;
-    
+    padding:30px;
 }
 
 h1, h3{
@@ -11,9 +9,11 @@ h1, h3{
 
 .border{
     padding:40px;
-    border-radius: 100px;
-    border-style: ridge;
+    border:0px;
 }
 .btn-group{
     justify-content:end;
+}
+ul{
+    list-style:none;
 }

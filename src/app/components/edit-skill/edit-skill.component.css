@@ -2,8 +2,11 @@ div{
     min-width: 200px;
     max-width: 300px;
 }
+.contenedor{
 
-#fixed{
-    position:static;
+    margin:auto;
+    margin-top:15%;
+
 }
+
 

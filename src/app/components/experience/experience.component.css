@@ -1,8 +1,13 @@
 .row{
 
-    padding:20px;
+    padding:30px;
+    
 }
+
 
 h1, h3{
     display:inline
+}
+ul{
+    list-style:none;
 }

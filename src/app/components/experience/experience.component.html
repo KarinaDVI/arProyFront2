@@ -2,26 +2,28 @@
     <h1>Experiencia Laboral   
         <h1 *ngIf="isAdmin"><button class="btn btn-info mb-1" routerLink="/experienceNuevo"> Nuevo</button></h1>
     </h1>
-    <div class="border">
-
+    <hr>
    <div class="col-lg-1"></div>
     <div class="col-lg-11">
         
         <ul class="item-list">
             <li *ngFor="let experience of listExperience">
                 <div class="data-container">
-                <div class="list-info">
-                    <div>
-                        <h3>Posición: {{experience.position}} </h3>
-                        <h3>en: {{experience.company}} </h3> - 
-                        <h3>( {{experience.starts}} - {{experience.ends}} ) </h3>
-                        <h3>{{experience.urlimg}}</h3>
-                        <h3>modo: {{experience.mode}}</h3>
-                    </div>
+                    <div class="row">
+                        <div class="col-sm-11 col-md-2 col-lg-2 offset-md-0 offset-lg-0 parte2">
+                            <img src={{experience.urlimg}} class="img-fluid img-education">
+                        </div>
+                        <div class="col-sm-11 col-md-7 col-lg-7 parte1">
+                            <h4>Posición: {{experience.position}} </h4>
+                            <h4>en: {{experience.company}} durante
+                            ( {{experience.starts}} - {{experience.ends}} ) </h4>
+                            <h4>en forma {{experience.mode}}</h4>
+                            
+                        </div>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <td *ngIf="isAdmin"><button type="button" class="btn btn-warning" routerLink="/experienceEdit/{{experience.id}}">Editar</button></td>
                         <td *ngIf="isAdmin"><button type="button" class="btn btn-danger" (click)="borrarExperienceDeLista(experience)">Eliminar</button></td>
-                      </div>   
+                    </div>   
                 
                 </div>
             </div>
@@ -30,6 +32,4 @@
         </ul>
     </div>
        
-
-    </div>
 </div>

@@ -3,7 +3,8 @@
     <h1>Educacion y Experiencia Laboral  
         <h1 *ngIf="isAdmin"><button class="btn btn-info mb-1" routerLink="/educationNuevo"> Nuevo</button></h1>
     </h1>
-    <div class="border">
+    <hr>
+ 
 
    <div class="col-lg-1"></div>
     <div class="col-lg-11">
@@ -11,14 +12,17 @@
         <ul class="item-list">
             <li *ngFor="let education of listEducation">
                 <div class="data-container">
-                <div class="list-info">
-                    <div>
-                        <h3>{{education.urlimg}}</h3>
-                        <h3>Educación: {{education.school}} </h3>
-                        <h3>Título: {{education.title}} </h3> - 
-                        <h3>( {{education.starts}} - {{education.ends}} ) </h3>
-                        <h3>{{education.status}}</h3>
-                        
+                    <div class="row">
+                        <div class="col-sm-11 col-md-2 col-lg-2 offset-md-0 offset-lg-0 parte2">
+                            <img src={{education.urlimg}} class="img-fluid img-education">
+                            </div>
+                        <div class="col-sm-11 col-md-7 col-lg-7 parte1">
+                            <h4>Educación: {{education.school}} </h4> 
+                            <h4>Título: {{education.title}} - 
+                            ( {{education.starts}} - {{education.ends}} ) </h4>
+                            <div class="btn-edit"> 
+                            <h4>{{education.status}}</h4>
+                            </div>
                     </div>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <td *ngIf="isAdmin"><button type="button" class="btn btn-warning" routerLink="/educationEdit/{{education.id}}">Editar</button></td>
@@ -32,5 +36,4 @@
     </div>
        
 
-    </div>
 </div>
