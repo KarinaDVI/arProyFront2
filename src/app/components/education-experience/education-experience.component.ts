@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educa } from 'src/app/models/Educa';
 import { EducationService } from 'src/app/services/education.service';
+import { TokenService } from 'src/app/services/token.service';
 //import { Educa } from 'src/app/models/Educa';
 
 
@@ -12,17 +13,25 @@ import { EducationService } from 'src/app/services/education.service';
 })
 export class EducationExperienceComponent implements OnInit {
 
+roles!: string[];
+isAdmin = false;
 listEducation:Educa[]=[];
   
   constructor(private educationService:EducationService,
               private activatedRoute: ActivatedRoute,
-              private router: Router
+              private router: Router,
+              private tokenService: TokenService
               ) { }
   
 
   ngOnInit(): void {
     this.cargarEducation();
-
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   cargarEducation():void{

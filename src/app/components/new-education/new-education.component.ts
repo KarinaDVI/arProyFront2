@@ -29,7 +29,7 @@ export class NewEducationComponent implements OnInit {
     this.educationService.saveEducation(newEducation).subscribe(
       data => {
         alert("Education creada");
-        this.router.navigate(['/']);
+        this.router.navigate(['']);
       }
 
     )

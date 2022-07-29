@@ -3,7 +3,9 @@
 <div class="row">
 
     <div class="border">
-        <h1>Proyectos realizados   <button class="btn btn-info" routerLink="/projectNuevo"> Nuevo</button>
+        <h1>Proyectos realizados   
+            <h1 *ngIf="isAdmin"><button class="btn btn-info" routerLink="/projectNuevo"> Nuevo</button>
+        </h1>
         </h1>
         
             <ul class="item-list">
@@ -16,8 +18,8 @@
                         <img src={{project.urlimg}} class="img-fluid img-proyecto">
                     </div>
                     <div >
-                        <button class="btn btn-warning mb-3" routerLink="/projectEdit/{{project.id}}">Editar</button>
-                        <button class="btn btn-danger mb-3" (click)="borrarProjectDeLista(project)">Eliminar</button>
+                        <td *ngIf="isAdmin"><button class="btn btn-warning mb-3" routerLink="/projectEdit/{{project.id}}">Editar</button></td>
+                        <td *ngIf="isAdmin"><button class="btn btn-danger mb-3" (click)="borrarProjectDeLista(project)">Eliminar</button></td>
                     </div>
                 </li>
             </ul>

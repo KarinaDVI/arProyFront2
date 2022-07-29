@@ -30,16 +30,26 @@ export class EditExperienceComponent implements OnInit {
   ngOnInit() {
     const id = this.activatedRoute.snapshot.params['id'];
     this.expeService.getExperience(id).subscribe(
-      (data) => {
+      data => {
         this.listExperience = data;
-      });
-      //this.router.navigate(['/']);
+      }, err =>{
+        alert("Error al modificar experiencia");
+        this.router.navigate(['']);
+      }
+    )
   }
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.expeService.updateExperience(id, this.listExperience!).subscribe(
-      
-    );
+      data => {
+        alert("Experiencia Actualizada");
+        this.router.navigate(['/']);
+      }, err =>{
+         alert("Error al modificar experiencia");
+         this.router.navigate(['']);
+      }
+    )
   }
+
 }

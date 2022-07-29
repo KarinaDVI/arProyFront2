@@ -26,7 +26,7 @@ export class NewProjectComponent implements OnInit {
     this.projectService.saveProject(newProject).subscribe(
       data => {
         alert("Proyecto creado");
-        this.router.navigate(['/']);
+        this.router.navigate(['']);
       }
 
     )

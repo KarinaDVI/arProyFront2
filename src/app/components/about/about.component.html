@@ -1,7 +1,8 @@
 
 <div class="row">
     
-    <h1 class="nuevo"><button class="btn btn-info mb-1" routerLink="/aboutNuevo"> Nuevo</button>
+    <h1 class="nuevo" >
+    <td *ngIf="isAdmin"><button class="btn btn-info mb-1" routerLink="/aboutNuevo"> Nuevo</button></td>
     </h1>
     <div class="row" *ngFor="let persona of personasList">
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
@@ -23,7 +24,7 @@
                 <h1>Acerca de mi</h1>
                 <p>{{persona.abouts}}</p>
                 <td *ngIf="isAdmin"><button class="btn btn-warning mb-3" routerLink="/aboutEdit/{{persona.id}}">Editar</button></td>
-                <button class="btn btn-danger mb-3" (click)="borrarPersonaDeLista(persona)">Eliminar</button>
+                <td *ngIf="isAdmin"><button class="btn btn-danger mb-3" (click)="borrarPersonaDeLista(persona)">Eliminar</button></td>
             </span>
         </div>
     </div>

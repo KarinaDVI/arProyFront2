@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/models/Skill';
 //import { ActivatedRoute, Router } from '@angular/router';
 import { SkillServiceService } from 'src/app/services/skill-service.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -13,20 +14,22 @@ export class SkillsComponent implements OnInit {
   radius:number=100;
   modalSwitch: boolean=false;
   skillsList:Skill[]=[];
-  /*skillEdit:any=null;
-  
-  listSkill: Skill | undefined;
-  */
-  constructor(private skillsDataService: SkillServiceService 
-              
-              //private activatedRoute: ActivatedRoute,
-              //private router: Router
+  roles!: string[];
+  isAdmin = false;
+
+  constructor(private skillsDataService: SkillServiceService,
+              private tokenService: TokenService 
               ) { }
     
   ngOnInit():void {
 
     this.cargarSkill();
-
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
    
   outerStrokeColor:string=this.color();

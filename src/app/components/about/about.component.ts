@@ -27,14 +27,11 @@ export class AboutComponent implements OnInit {
       }
     });
   }
-  
 
   getAllPersons():void{
     this.datosPersona.getAllPersons().subscribe((data:any[])=>{
       console.log(data);
       this.personasList=data;
-      //this.color();
-     //this.skillColor(<number>this.skillsList.progress);
     })
     }
 
@@ -42,10 +39,7 @@ export class AboutComponent implements OnInit {
   borrarPersonaDeLista(personaParaBorrar: Persona): void{
     this.personasList= this.personasList.filter(p => p.id !== personaParaBorrar.id)
     this.datosPersona.deletePersona(this.personasList, personaParaBorrar).subscribe();
-  }
-
-  modificarPersona(personaParaEditar:Persona){
-    this.personasList= this.personasList.filter(p => p.id !== personaParaEditar.id)
+    
   }
 
 

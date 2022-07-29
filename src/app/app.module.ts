@@ -17,7 +17,6 @@ from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AutenticationService } from './services/autentication.service';
 import { InterceptorService } from './services/interceptor.service';
 import { EditAboutComponent } from './components/edit-about/edit-about.component';
 import { NewAboutComponent } from './components/new-about/new-about.component';
@@ -70,7 +69,7 @@ import { LoginComponent } from './components/auth/login.component';
     RouterModule,
     
   ],
-  providers: [AutenticationService, AuthService,
+  providers: [AuthService,
   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true},
   ],
   bootstrap: [AppComponent]

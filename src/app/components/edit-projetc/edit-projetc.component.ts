@@ -21,17 +21,25 @@ export class EditProjetcComponent implements OnInit {
   ngOnInit() {
     const id = this.activatedRoute.snapshot.params['id'];
     this.projectService.getProject(id).subscribe(
-      (data) => {
+      data => {
         this.listProject = data;
-      });
-      //this.router.navigate(['/']);
+      }, err =>{
+        alert("Error al modificar proyecto");
+        this.router.navigate(['']);
+      }
+    )
   }
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.projectService.updateProject(id, this.listProject!).subscribe(
-      
-    );
+      data => {
+        this.router.navigate(['']);
+      }, err =>{
+         alert("Error al modificar proyecto");
+         this.router.navigate(['']);
+      }
+    )
   }
-}
 
+}

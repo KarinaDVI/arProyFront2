@@ -30,7 +30,7 @@ export class NewExperienceComponent implements OnInit {
     this.expeService.saveExperience(newExperience).subscribe(
       data => {
         alert("Education creada");
-        this.router.navigate(['/']);
+        this.router.navigate(['']);
       }
 
     )

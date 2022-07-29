@@ -20,20 +20,28 @@ export class EditAboutComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.aboutService.getPersona(id).subscribe(
-      (data) => {
+      data => {
         this.aboutMe = data;
       });
-    //this.router.navigate(['/']);
+    //this.router.navigate(['']);
   }
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.aboutService.updatePersona(id, this.aboutMe!).subscribe(
-      /*agregado by me
-      (data) => {
-        this.aboutMe = data;}
-        */
-    );
-  }
+      
+      data => {
+        alert("Persona modificada");
+        this.router.navigate(['']);
+        
+      }, err =>{
+        alert("Error al modificar persona");
+        this.router.navigate(['']);
+     }
+   )
+ }
 
 }
+
+        
+ 

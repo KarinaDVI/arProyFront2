@@ -1,5 +1,6 @@
 <div class="row">
-    <h1>Experiencia Laboral   <button class="btn btn-info mb-1" routerLink="/experienceNuevo"> Nuevo</button>
+    <h1>Experiencia Laboral   
+        <h1 *ngIf="isAdmin"><button class="btn btn-info mb-1" routerLink="/experienceNuevo"> Nuevo</button></h1>
     </h1>
     <div class="border">
 
@@ -15,12 +16,11 @@
                         <h3>en: {{experience.company}} </h3> - 
                         <h3>( {{experience.starts}} - {{experience.ends}} ) </h3>
                         <h3>{{experience.urlimg}}</h3>
-                        <h3>{{experience.mode}}</h3>
+                        <h3>modo: {{experience.mode}}</h3>
                     </div>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-info">Agregar</button>
-                        <button type="button" class="btn btn-warning" routerLink="/experienceEdit/{{experience.id}}">Editar</button>
-                        <button type="button" class="btn btn-danger" (click)="borrarExperienceDeLista(experience)">Eliminar</button>
+                        <td *ngIf="isAdmin"><button type="button" class="btn btn-warning" routerLink="/experienceEdit/{{experience.id}}">Editar</button></td>
+                        <td *ngIf="isAdmin"><button type="button" class="btn btn-danger" (click)="borrarExperienceDeLista(experience)">Eliminar</button></td>
                       </div>   
                 
                 </div>

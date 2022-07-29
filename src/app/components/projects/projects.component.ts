@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from 'src/app/models/Project';
 import { ProjectService } from 'src/app/services/project.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-projects',
@@ -10,12 +11,20 @@ import { ProjectService } from 'src/app/services/project.service';
 export class ProjectsComponent implements OnInit {
   
   projectList:Project[]=[];
+  roles!: string[];
+  isAdmin = false;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService,
+              private tokenService: TokenService) { }
     
   ngOnInit():void {
     this.cargarProject();
-
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
 cargarProject():void{

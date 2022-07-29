@@ -19,6 +19,7 @@
     }
     #nombre{
         font-weight:bold;
+        font-size: large;
         margin-top:5%;
     }
     .nuevo{

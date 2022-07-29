@@ -30,7 +30,7 @@ export class NewSkillComponent implements OnInit {
     this.skillService.saveSkill(newSkill).subscribe(
       data => {
         alert("About creado");
-        this.router.navigate(['/']);
+        this.router.navigate(['']);
       }
 
     )

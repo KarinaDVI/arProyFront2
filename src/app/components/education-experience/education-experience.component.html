@@ -1,6 +1,7 @@
 
 <div class="row">
-    <h1>Educacion y Experiencia Laboral  <button class="btn btn-info mb-1" routerLink="/educationNuevo"> Nuevo</button>
+    <h1>Educacion y Experiencia Laboral  
+        <h1 *ngIf="isAdmin"><button class="btn btn-info mb-1" routerLink="/educationNuevo"> Nuevo</button></h1>
     </h1>
     <div class="border">
 
@@ -20,8 +21,8 @@
                         
                     </div>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-warning" routerLink="/educationEdit/{{education.id}}">Editar</button>
-                        <button type="button" class="btn btn-danger" (click)="borrarEducationDeLista(education)">Eliminar</button>
+                        <td *ngIf="isAdmin"><button type="button" class="btn btn-warning" routerLink="/educationEdit/{{education.id}}">Editar</button></td>
+                        <td *ngIf="isAdmin"><button type="button" class="btn btn-danger" (click)="borrarEducationDeLista(education)">Eliminar</button></td>
                       </div>   
                 
                 </div>
