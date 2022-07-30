@@ -20,23 +20,25 @@
                     [(ngModel)]="listSkill.confirmsNames" required>
                 </div>
                 <div class="form-group">
-                    <label for="imageSrc">imageSrc</label>
+                    <label for="imageSrc">imagen de habilidad</label>
                     <input type="text" class="form-control" id="imageSrc" name="imageSrc"
                         [(ngModel)]="listSkill.imageSrc" required>
                 </div>
                 <div class="form-group">
-                    <label for="outerStrokeColor">outerStrokeColor</label>
+                    <label for="outerStrokeColor">circulo externo</label>
                     <input type="color" class="form-control" id="outerStrokeColor" name="outerStrokeColor"
                     [(ngModel)]="listSkill.outerStrokeColor" required>
                 </div>
                 <div class="form-group">
-                    <label for="innerStrokeColor">innerStrokeColor</label>
+                    <label for="innerStrokeColor">circulo interno</label>
                     <input type="color" class="form-control" id="innerStrokeColor" name="innerStrokeColor"
                     [(ngModel)]="listSkill.innerStrokeColor" required>
                 </div>
+                <br>
+                <div class="btn-group">
                 <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
                 <button class="btn btn-info" routerLink="/">Volver</button>
-                <!--<button class="btn btn-info" (click)="modificarSkill(listSkill.id)">modificar</button>-->
+                </div>
                
             </form>
         </div>

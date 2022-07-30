@@ -1,7 +1,7 @@
 
 .row{
     padding:30px;
-    font-size:larger;
+    font-size:large;
     
 }
 #id{
@@ -17,18 +17,17 @@ div{
 @media(min-width:576px){
     img{ 
         position: sticky;
-        margin-top: -230px;
-        margin-bottom:40px;
-        top: -300px;
-        min-width:20%;
+        margin-top: -110%;
+        margin-bottom: 40px;
+        top: -30em;
+        min-width: 80px;
         max-width: 100%;
-        border-radius:100%;
-        box-shadow: 3px 3px 40px rgb(218, 209, 185);
+        border-radius: 100%;
+        box-shadow: 3px 3px 40px rgb(218 209 185);
         left: -4%;
-        overflow-x:visible;
+        overflow-x: visible
+        }
         
-    }
-
     #nombre{
         font-weight:bold;
         font-size: larger;
@@ -54,16 +53,17 @@ div{
 @media(max-width:575px){
     img{ 
         position: sticky;
-        margin-top: -230px;
-        top: -300px;
-        min-width:30%;
-        max-width: 40%;
-        border-radius:100%;
+        margin-top: -40%;
+        top: -10em;
+        min-width: 30%;
+        max-width: 30%;
+        border-radius: 100%;
         box-shadow: 3px 3px 3px rgb(234, 235, 233);
         left: 3%;
-        overflow-x:visible;
+        overflow-x: visible;
         
     }
+        
     #nombre{
         font-weight:bold;
         margin-top:-0%;

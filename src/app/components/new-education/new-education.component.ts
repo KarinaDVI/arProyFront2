@@ -28,7 +28,7 @@ export class NewEducationComponent implements OnInit {
 
     this.educationService.saveEducation(newEducation).subscribe(
       data => {
-        alert("Education creada");
+        alert("Educación creada");
         this.router.navigate(['']);
       }
 

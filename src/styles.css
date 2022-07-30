@@ -39,3 +39,10 @@ h4 > .ispan{
 .card{
     background-color:initial;
 }
+
+.nav-tabs .nav-link{
+   color: rgb(202, 208, 211);
+   font-size: medium;
+}
+
+ 

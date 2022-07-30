@@ -8,3 +8,21 @@ div{
     margin-top:15%;
 
 }
+
+#outerStrokeColor{
+    border-radius: 50px;
+    max-width: 60px;
+    height: 50px;
+    
+}
+
+#innerStrokeColor{
+    border-radius: 50px;
+    max-width: 60px;
+    height: 50px;
+}
+.row{
+    
+    flex-wrap:unset;
+    
+}

@@ -12,7 +12,7 @@ h1, h3{
     border:0px;
 }
 .btn-group{
-    justify-content:end;
+    justify-content:center;
 }
 ul{
     list-style:none;

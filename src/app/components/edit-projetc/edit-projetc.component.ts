@@ -34,6 +34,7 @@ export class EditProjetcComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.projectService.updateProject(id, this.listProject!).subscribe(
       data => {
+        alert("Modificado con éxito");
         this.router.navigate(['']);
       }, err =>{
          alert("Error al modificar proyecto");

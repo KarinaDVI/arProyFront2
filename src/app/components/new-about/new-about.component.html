@@ -20,30 +20,39 @@
                 <div class="form-group">
                     <label for="seniority">Seniority</label>
                         <input type="text" class="form-control" id="seniority" name="seniority" 
-                        [(ngModel)]="seniority" >
+                        [(ngModel)]="seniority" required>
                 </div>
                 <div class="form-group">
                     <label for="urlimage">Image</label>
                         <input type="text" class="form-control" id="urlimage" name="urlimage" 
-                        [(ngModel)]="urlimage" >
+                        [(ngModel)]="urlimage" required>
 
                 </div>
                 <div class="form-group">
                     <label for="company">company</label>
                         <input type="text" class="form-control" id="company" name="company" 
-                        [(ngModel)]="company" >
+                        [(ngModel)]="company" required>
                 </div>
 
                 <div class="form-group">
                     <label for="position">position</label>
                         <input type="text" class="form-control" id="position" name="position" 
-                        [(ngModel)]="position" >
+                        [(ngModel)]="position" required>
                 </div>
+                
                 <div class="form-group">
-                    <label for="position">About me</label>
+                    <label for="aboutMe">About me</label>
+                    <textarea id="aboutMe" name="aboutMe" rows="4" cols="50" [(ngModel)]="abouts" required>
+                        </textarea>
+                    </div>
+                <!--
+                <div class="form-group">
+                    <label for="aboutMe">About me</label>
                         <input type="text" class="form-control" id="aboutMe" name="position" 
-                        [(ngModel)]="abouts" >
+                         >
                 </div>
+                -->
+
                 <br>
                 <button class="btn btn-danger" [disabled]="!f.valid">Crear</button>
                 <button class="btn btn-info" routerLink="/">Volver</button>

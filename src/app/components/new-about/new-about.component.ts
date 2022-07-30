@@ -31,7 +31,7 @@ export class NewAboutComponent implements OnInit {
   const personNew=new Persona(this.nombre,this.apellido,this.edad,this.fechaNac,this.seniority,
     this.urlimage,this.company,this.position,this.abouts);
   this.aboutService.savePersona(personNew).subscribe(
-    data=>{
+    data => {
       alert("Acerca de mi creado");
       this.router.navigate(['']);
       }

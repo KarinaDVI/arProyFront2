@@ -3,43 +3,40 @@
         <div class="col-md-4-auto-4">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="name">Aptitud</label>
-                        <input type="text" class="form-control" id="name" name="name" 
-                        [(ngModel)]="name" required>
-
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                    [(ngModel)]="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="edad">Progreso</label>
-                        <input type="number" class="form-control" id="progress" name="progress" 
-                        [(ngModel)]="progress" >
-                    
-                </div>
-            
-                <div class="form-group">
-                    <label for="confirmsNames">Confirman:   </label>
-                        <input type="text" class="form-control" id="confirmsNames" name="confirmsNames" 
-                        [(ngModel)]="confirmsNames" >
+                    <label for="progress">Progreso</label>
+                    <input type="number" class="form-control" id="progress" name="progress"
+                    [(ngModel)]="progress" required>
                 </div>
                 <div class="form-group">
-                    <label for="imageSrc">imageSrc</label>
+                    <label for="confirmsNames">las personas: </label>
+                    <input type="text" class="form-control" id="confirmsNames" name="confirmsNames"
+                    [(ngModel)]="confirmsNames" required>
+                </div>
+                <div class="form-group">
+                    <label for="imageSrc">imagen de habilidad</label>
                     <input type="text" class="form-control" id="imageSrc" name="imageSrc"
                         [(ngModel)]="imageSrc" required>
                 </div>
                 <div class="form-group">
-                    <label for="confirmsNames">circulo externo</label>
-                        <input id=#selectOuter type="color" class="form-control" id="outerStrokeColor" name="outerStrokeColor" 
-                        [(ngModel)]="outerStrokeColor" >
+                    <label for="outerStrokeColor">circulo externo</label>
+                    <input type="color" class="form-control" id="outerStrokeColor" name="outerStrokeColor"
+                    [(ngModel)]="outerStrokeColor" required>
                 </div>
-
                 <div class="form-group">
-                    <label for="confirmsNames">Circulo interno</label>
-                        <input id=#selectInner type="color" class="form-control" id="innerStrokeColor" name="innerStrokeColor" value="innerStrokeColor"
-                        [(ngModel)]="innerStrokeColor" >
+                    <label for="innerStrokeColor">circulo interno</label>
+                    <input type="color" class="form-control" id="innerStrokeColor" name="innerStrokeColor"
+                    [(ngModel)]="innerStrokeColor" required>
                 </div>
-
                 <br>
+                
                 <button class="btn btn-danger" [disabled]="!f.valid">Crear</button>
                 <button class="btn btn-info" routerLink="/">Volver</button>
+               
             </form>
         </div>
     </div>

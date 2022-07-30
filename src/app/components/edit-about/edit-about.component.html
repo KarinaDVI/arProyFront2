@@ -39,9 +39,17 @@
                 </div>
                 <div class="form-group">
                     <label for="abouts">About me</label>
+                    <textarea id="aboutMe" name="abouts" rows="4" cols="50" [(ngModel)]="aboutMe.abouts" required>
+                        </textarea>
+                    </div>
+
+                <!--
+                <div class="form-group">
+                    <label for="abouts">About me</label>
                     <input type="text" class="form-control" id="abouts" name="abouts" 
                     [(ngModel)]="aboutMe.abouts" required>
                 </div>
+                -->
                 <button class="btn btn-danger btn-block" [disabled]="!f.valid">Actualizar</button>
                 <button class="btn btn-info" routerLink="/">Volver</button>
             </form>

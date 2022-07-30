@@ -16,20 +16,22 @@ export class NewSkillComponent implements OnInit {
     
   name: string = "";
   progress: number = 0;
-  confirms: number = 0;
   confirmsNames: string = "";
+  imageSrc: string = "";
   outerStrokeColor: string = "";
   innerStrokeColor: string = "";
-  imageSrc: string = "";
+  
+
   ngOnInit(): void {
   }
+   
   onCreate(): void {
-    const newSkill = new Skill(this.name,this.progress,this.confirms,
+    const newSkill = new Skill(this.name,this.progress,
       this.confirmsNames,this.imageSrc,this.outerStrokeColor,this.innerStrokeColor);
 
     this.skillService.saveSkill(newSkill).subscribe(
       data => {
-        alert("About creado");
+        alert("Skill creada");
         this.router.navigate(['']);
       }
 
