@@ -1,27 +1,22 @@
-# ArgProyKarinaBouza
+#arProyFront2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Este es el frontend de mi portfolio realizado para el módulo #YoProgramo del programa nacional argentinaprograma
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+La instalación es la común a los repos de git. Se puede clonar con $ git clone url o bien descargar el código del enlace  
 
-## Code scaffolding
+Para la instalación ver el README provisto por git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+El usuario y la contraseña para el login de administrador es:
 
-## Build
+usuario: **admin**  
+contraseña: **pass**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Alternativamente ingresar:
 
-## Running unit tests
+usuario: **admin1** o **admin2**  
+contraseña: **pass**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+En la pestaña de registro de usuario el usuario que se crea es meramente para fines pedagógicos. Se puede visualizar igual el perfil. Los usuarios que no son administradores no pueden hacer el crud completo, solo ven el perfil.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Karina Bouza kbbouza@gmail.com
