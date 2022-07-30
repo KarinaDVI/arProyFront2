@@ -34,11 +34,9 @@
                     <input type="color" class="form-control" id="innerStrokeColor" name="innerStrokeColor"
                     [(ngModel)]="listSkill.innerStrokeColor" required>
                 </div>
-                <br>
-                <div class="btn-group">
-                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <hr>
+                <button class="btn btn-success btn-block" [disabled]="!f.valid">Actualizar</button>
                 <button class="btn btn-info" routerLink="/">Volver</button>
-                </div>
                
             </form>
         </div>

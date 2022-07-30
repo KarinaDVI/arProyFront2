@@ -29,9 +29,11 @@
                         <input type="password" name="password" id="password" class="form-control"
                         [(ngModel)]="password" required>
                     </div>
+                    <hr>
                     <div class="form-group">
                         <button class="btn btn-success btn-block" [disabled]="!f.valid">
                             <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+                        <button class="btn btn-info" routerLink="/">Volver</button>
                     </div>
                 </form>
                 <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">Error en el login {{errMsj}}</div>

@@ -50,8 +50,11 @@
                     [(ngModel)]="aboutMe.abouts" required>
                 </div>
                 -->
-                <button class="btn btn-danger btn-block" [disabled]="!f.valid">Actualizar</button>
+                <hr>
+                <div class="btn-group">
+                <button class="btn btn-success btn-block" [disabled]="!f.valid">Actualizar</button>
                 <button class="btn btn-info" routerLink="/">Volver</button>
+            </div>
             </form>
         </div>
     </div>
