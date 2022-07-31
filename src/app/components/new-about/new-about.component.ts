@@ -16,7 +16,6 @@ export class NewAboutComponent implements OnInit {
   
   nombre:string="";
   apellido:string="";
-  edad:number=0;
   fechaNac:string="";
   seniority:string="";
   urlimage:string="";
@@ -28,15 +27,17 @@ export class NewAboutComponent implements OnInit {
   }
 
   onCreate(): void  {
-  const personNew=new Persona(this.nombre,this.apellido,this.edad,this.fechaNac,this.seniority,
+  const personNew=new Persona(this.nombre,this.apellido,this.fechaNac,this.seniority,
     this.urlimage,this.company,this.position,this.abouts);
-  this.aboutService.savePersona(personNew).subscribe(
-    data => {
-      alert("Acerca de mi creado");
-      this.router.navigate(['']);
-      }
-      
-    )
-  }
 
+  this.aboutService.savePersona(personNew).subscribe!(
+    data => {
+      alert("Acerca de mi creado")!;
+      this.router.navigate([''])!;
+      }
+    )
+    alert("Acerca de mi creado")!;
+    this.router.navigate(['']);
+  }
+  
 }

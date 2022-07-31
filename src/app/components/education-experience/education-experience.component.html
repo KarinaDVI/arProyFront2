@@ -1,6 +1,6 @@
 
 <div class="row">
-    <h1>Educacion y Experiencia Laboral  
+    <h1>Educacion 
         <h1 *ngIf="isAdmin"><button class="btn btn-info mb-1" routerLink="/educationNuevo"> Nuevo</button></h1>
     </h1>
     <hr>
@@ -18,7 +18,7 @@
                             </div>
                         <div class="col-sm-11 col-md-7 col-lg-7 parte1">
                             <h4>Educación: {{education.school}} </h4> 
-                            <h4>Título: {{education.title}} - 
+                            <h4>en: {{education.title}} - 
                             ( {{education.starts}} - {{education.ends}} ) </h4>
                             <div class="btn-edit"> 
                             <h4>{{education.status}}</h4>

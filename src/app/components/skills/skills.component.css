@@ -14,15 +14,12 @@ text-center{
     padding:40px;
     padding-left: -1rem;
     margin-right: -12px;
-    flex-direction: column-reverse;
     
 }
 circle-progress{
     align-self:center;
     flex-shrink: 1;
     width:0px;
-    padding:5px;
-    
 }
 
 .padding{
@@ -51,9 +48,7 @@ circle-progress{
     max-width: 60px;
     height: 50px;
 }
-* > .border {
-    border: 0px solid #dee2e6 !important;
-}
+
 
 .btn-group{
     justify-content:flex-end;

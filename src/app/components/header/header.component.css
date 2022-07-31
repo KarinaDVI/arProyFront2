@@ -1,4 +1,6 @@
-
+.row > *{
+    padding-right: 0px;
+}
 app-login{
     float:right;
     margin-top:15px;
@@ -9,4 +11,7 @@ app-redes-sociales{
     margin-top:25px;
     margin-left:20px;
     margin-bottom:-40px;
+}
+div{
+    background-color: black;
 }

@@ -17,9 +17,10 @@ ul{
 
 body{
     /*background-color:rgb(73, 63, 55);*/
-    background-image: URL("../../../assets/3153478.jpg");
-    background-size:initial;
+    background-image: URL("../../../assets/vecteezy_abstract-background-of-black-elements-premium-background_8791387.jpg");
+    background-size:auto;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .btn-edit > span{
@@ -43,6 +44,10 @@ h4 > .ispan{
 .nav-tabs .nav-link{
    color: rgb(202, 208, 211);
    font-size: medium;
+}
+
+.row{
+    margin-right: 0px;
 }
 
  

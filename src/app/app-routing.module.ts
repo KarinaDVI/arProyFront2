@@ -25,7 +25,7 @@ const routes: Routes = [
   
   {path:'',component: HomeComponent},
   {path:'login',component: LoginComponent},
-  {path: 'registro',component: RegistroComponent},
+  {path:'registro',component: RegistroComponent},
   {path:'aboutNuevo',component: NewAboutComponent},
   {path:'aboutEdit/:id',component: EditAboutComponent},
   {path:'skillNuevo',component: NewSkillComponent},
@@ -36,10 +36,7 @@ const routes: Routes = [
   {path:'experienceNuevo',component: NewExperienceComponent},
   {path:'projectNuevo',component: NewProjectComponent},
   {path:'projectEdit/:id',component: EditProjetcComponent},
-  //{path:'experienceEdit/:id',component: EditSkillComponent},
-  //{path:'',redirectTo:'portfolio',pathMatch:'full'},
-  //Original
-  //{path:'',redirectTo:'login',pathMatch:'full'}//,
+  {path: 'volver', redirectTo: '',pathMatch:'full'},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 
 ];
