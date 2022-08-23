@@ -7,9 +7,6 @@ La instalación es la común a los repos de git. Se puede clonar con $ git clone
 
 Para la instalación ver el README provisto por git
 
-El usuario y la contraseña para el login de administrador es:
-
-
 
 En la pestaña de registro de usuario el usuario que se crea es meramente para fines pedagógicos. Se puede visualizar igual el perfil. Los usuarios que no son administradores no pueden hacer el crud completo, solo ven el perfil.
 
